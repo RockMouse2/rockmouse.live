@@ -1,28 +1,31 @@
 {
-  "name": "rockmouse-site",
-  "main": "worker/index.js",
-  "compatibility_date": "2026-08-26",
-  "assets": {
-    "directory": "./public",
-    "binding": "ASSETS",
-    "not_found_handling": "404-page",
-    "run_worker_first": ["/Agents/*", "/api/*"]
-  },
-  "vars": {
-    "ALLOWED_ORIGIN": "https://rockmouse.live",
-    "DEFAULT_MODEL": "claude-sonnet-4-6",
-    "MAX_TOKENS": "1024"
-  },
-  "d1_databases": [
-    {
-      "binding": "rockmouse_logins",
-      "database_name": "rockmouse-logins",
-      "database_id": "c0c852ba-029f-4f23-bde3-342c8773d6b6"
-    }
-  ],
-  "triggers": {
-    "crons": [
-      "0 21 * * *"
-    ]
-  }
+	"name": "rockmouse-site",
+	"main": "worker/index.js",
+	"compatibility_date": "2026-08-26",
+	"assets": {
+		"directory": "./public",
+		"binding": "ASSETS",
+		"not_found_handling": "404-page",
+		"run_worker_first": [
+			"/Agents/*",
+			"/api/*"
+		]
+	},
+	"vars": {
+		"ALLOWED_ORIGIN": "https://rockmouse.live",
+		"DEFAULT_MODEL": "claude-sonnet-4-6",
+		"MAX_TOKENS": "1024"
+	},
+	"d1_databases": [
+		{
+			"binding": "rockmouse_logins",
+			"database_name": "rockmouse-logins",
+			"database_id": "eedbf0d8-15e9-4e96-9429-afdf1c8f177e"
+		}
+	],
+	"triggers": {
+		"crons": [
+			"0 21 * * *"
+		]
+	}
 }
